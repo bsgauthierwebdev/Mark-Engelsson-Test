@@ -1,3 +1,16 @@
+# Mark Engelsson - Author Website
+## Website for author's books
+### Site will contain About, Books & Contact Pages
+### Site will also house a blog
+#### Project built using the following technologies:
+##### Design: React.js
+##### Styling: CSS / SASS
+##### Database Management (Blog): GraphQL
+##### Link application to db: Apollo Client
+
+-----
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
