@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react';
 import {BrowserRouter, Routes, Route} from'react-router-dom';
 import Navigation from './Components/Navigation';
@@ -7,6 +6,7 @@ import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Books from './Pages/Books';
 import Contact from './Pages/Contact';
+import {Layout} from './Components'
 import './Styles/App.css';
 
 function App() {

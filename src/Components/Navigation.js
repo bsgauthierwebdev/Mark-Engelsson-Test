@@ -1,14 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, {useContext} from 'react'
+import { Link } from 'react-router-dom'
+import '../Styles/Navigation.css'
+
+const categories = [
+  {
+    name: 'React',
+    slug: 'react'
+  },
+
+  {
+    name: 'Books',
+    slug: 'books'
+  }
+]
 
 const Navigation = () => {
   return (
-    <div>
-        <Link to = '/'><h2>Home</h2></Link>
-        <Link to = '/about'><h2>About</h2></Link>
-        <Link to = '/books'><h2>Books</h2></Link>
-        <Link to = '/contact'><h2>Contact</h2></Link>
-        <Link to = '/blog'><h2>Blog</h2></Link>
+    <div className = 'Navigation'>
+      <div className = 'Navigation-sub'>
+        <div className = 'Navigation-third'>
+          <Link to = '/'>
+            <span className = 'Navigation-link'>
+              Mark Engellson Blog
+            </span>
+          </Link>
+        </div>
+        <div className = 'Navigation-categories'>
+          {categories.map((category) => (
+            <Link to = {`/category/${category.slug}`} key = {category.slug}>
+              <span className = 'Navigation-categories-link'>
+                {category.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

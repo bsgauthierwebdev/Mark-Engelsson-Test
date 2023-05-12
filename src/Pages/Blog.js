@@ -1,5 +1,5 @@
-import React from 'react'
-import {Categories, PostCard, PostWidget} from '../Components'
+import React, {useState, useEffect} from 'react'
+import {Categories, PostCard, PostWidget, Layout} from '../Components'
 import '../Styles/Blog.css'
 
 const posts = [
@@ -16,22 +16,23 @@ const posts = [
 
 const Blog = () => {
   return (
-    <div>
+    <div className = 'Blog'>
+      <Layout>
         <h1>Blog</h1>
-        <div className = 'blog-posts'>
-          <div className = 'blog-posts-content'>
+        <div className = 'Blog-content'>
+          <div className = 'Blog-posts'>
             {posts.map((post, index) => (
               <PostCard post = {post} key = {post.title} />
             ))}
           </div>
-          <div className = 'recent-posts'>
-              <div className = 'recent-posts-content'>
+          <div className = 'Blog-recent'>
+              <div className = 'Blog-recent-content'>
                 <PostWidget />
                 <Categories />
               </div>
           </div>
         </div>
-        
+      </Layout>  
     </div>
   )
 }
