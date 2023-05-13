@@ -26,7 +26,7 @@ const GET_CHARACTERS = gql`
     }
 `
 
-export const DisplayPosts = () => {
+const DisplayPosts = () => {
     const {error, loading, data} = useQuery(GET_CHARACTERS);
     if (loading) return <p>Loading...</p>
     if (error) return <p>{error}</p>
@@ -37,3 +37,5 @@ export const DisplayPosts = () => {
         </div>
     ))
 }
+
+export default DisplayPosts

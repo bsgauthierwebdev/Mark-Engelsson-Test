@@ -1,5 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from "@apollo/client"
+import {Categories, PostCard, PostWidget, Layout} from '../Components'
+import '../Styles/Blog.css'
 
 const GET_POSTS = gql`
     query {
@@ -38,69 +40,38 @@ function DisplayPosts() {
       title,
       createdAt,
       excerpt,
-      author 
+      author,
     }) => (
     <div>
-      <h3>{title}</h3>
-      <p>{createdAt}</p>
-      <p>{excerpt}</p>
-      <p>{author.name}</p>
-      <p>{author.bio}</p>
+      <h3>Title: {title}</h3>
+      <p>Written: {createdAt}</p>
+      <p>Preview: {excerpt}</p>
+      <p>Written by: {author.name}</p>
+      <p>About the author: {author.bio}</p>
     </div>
   ))
 }
 
 const Blog = () => {
   return (
-    <div>
-      <h1>BLOG</h1>
-      <DisplayPosts />
+    <div className = 'Blog'>
+      <Layout>
+        <h1>BLOG</h1>
+        <div className = 'Blog-content'>
+          <div className = 'Blog-posts'>
+            <DisplayPosts />
+          </div>
+          <div className = 'Blog-recent'>
+            <div className = 'Blog-recent-content'>
+              <PostWidget />
+              <Categories />
+            </div>
+          </div>
+        </div>
+      </Layout>
     </div>
   )
 }
 
 export default Blog
 
-
-
-
-// import React, {useState, useEffect} from 'react'
-// import {Categories, PostCard, PostWidget, Layout} from '../Components'
-// import '../Styles/Blog.css'
-
-// const posts = [
-//   {
-//     title: 'Blog Testing Post',
-//     excerpt: "I'm testing out the Blog page setup",
-//   },
-
-//   {
-//     title: 'Second Test Post',
-//     excerpt: "I'm testing out the Blog page setup yet again",
-//   }
-// ]
-
-// const Blog = () => {
-//   return (
-//     <div className = 'Blog'>
-//       <Layout>
-//         <h1>Blog</h1>
-//         <div className = 'Blog-content'>
-//           <div className = 'Blog-posts'>
-//             {posts.map((post, index) => (
-//               <PostCard post = {post} key = {post.title} />
-//             ))}
-//           </div>
-//           <div className = 'Blog-recent'>
-//               <div className = 'Blog-recent-content'>
-//                 <PostWidget />
-//                 <Categories />
-//               </div>
-//           </div>
-//         </div>
-//       </Layout>  
-//     </div>
-//   )
-// }
-
-// export default Blog
