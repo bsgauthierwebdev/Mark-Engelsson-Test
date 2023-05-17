@@ -1,17 +1,15 @@
 import React from 'react'
-import {Categories, PostCard, PostWidget, Layout} from '../Components'
-import DisplayPosts from '../Queries/DisplayPosts'
-import '../Styles/Blog.css'
+import { getPosts } from '../Services/Services'
+import { PostCard, PostWidget, Categories, Layout } from '../Components'
 
-const Blog = () => {
+const TestBlog = ({posts}) => {
   return (
     <div className = 'Blog'>
       <Layout>
         <h1>BLOG</h1>
         <div className = 'Blog-content'>
           <div className = 'Blog-posts'>
-            <PostCard />
-            {/* <DisplayPosts /> */}
+            {/* {posts.map((post) => <PostCard post = {post} key = {post.title} />)} */}
           </div>
           <div className = 'Blog-recent'>
             <div className = 'Blog-recent-content'>
@@ -25,5 +23,14 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default TestBlog
 
+export async function getStaticProps() {
+    const posts = (await getPosts()) || []
+
+    return {
+        props: {
+            posts
+        }
+    }
+}

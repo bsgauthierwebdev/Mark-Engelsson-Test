@@ -7,6 +7,7 @@ import Blog from './Pages/Blog';
 import Books from './Pages/Books';
 import Contact from './Pages/Contact';
 import {Layout} from './Components'
+import TestBlog from './Pages/TestBlog';
 import './Styles/App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Routes>
               <Route path = '/' element = {<Landing />} />
               <Route path = '/about' element = {<About />} />
+              {/* <Route path = '/blog' element = {<TestBlog />} /> */}
               <Route path = '/blog' element = {<Blog />} />
               <Route path = '/books' element = {<Books />} />
               <Route path = '/contact' element = {<Contact />} />

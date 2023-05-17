@@ -1,0 +1,51 @@
+.PostCard {
+    /* bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 */
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    padding: 8;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+}
+
+.PostCard-img-box {
+    /* relative overflow-hidden shadow-md pb-80 mb-6 */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    padding-bottom: 80px;
+    margin-bottom: 6px;
+}
+
+.PostCard-img-content {
+    /* object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg*/
+    object-position: top;
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+@media (max-width:640px) {
+    .PostCard {
+        padding: 0;
+    }
+
+    .PostCard-img-content {
+        object-position: top;
+        position: absolute;
+        height: 80px;
+        width: full;
+        object-fit: cover;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+}
