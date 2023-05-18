@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Books from './Pages/Books';
 import Contact from './Pages/Contact';
+import Press from './Pages/Press';
 import {Layout} from './Components'
 import TestBlog from './Pages/TestBlog';
 import './Styles/App.css';
@@ -17,7 +18,7 @@ function App() {
         <BrowserRouter>
           <h1>Mark Engellson</h1>
           <div className = 'Navigation'>
-            {/* <Navigation /> */}
+            <Navigation />
           </div>
           <div className = 'content'>
             <Routes>
@@ -27,6 +28,7 @@ function App() {
               <Route path = '/blog' element = {<Blog />} />
               <Route path = '/books' element = {<Books />} />
               <Route path = '/contact' element = {<Contact />} />
+              <Route path = '/press' element = {<Press />} />
             </Routes>
           </div>
         </BrowserRouter>
