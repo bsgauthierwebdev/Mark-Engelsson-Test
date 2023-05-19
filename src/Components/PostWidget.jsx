@@ -57,22 +57,6 @@ const PostWidget = () => {
       ))}
     </div>
   )
-
-//   return data.posts.map((
-//     {
-//       title,
-//       featuredImage,
-//       createdAt,
-//       slug
-//     }
-//   ) => (
-//     <div className = 'PostWidget'>
-//       <h3 className = 'PostWidget-header'>
-//         Recent Posts
-//       </h3>
-//       {title}
-//     </div>
-//   ))
 }
 
 export default PostWidget
