@@ -15,8 +15,10 @@
 }
 
 .Blog-recent-content {
- /* sticky relative top-8 */
+    /* sticky relative top-8 */
+    position: -webkit-sticky; /* Safari */
     position: sticky;
+    top: 0;
     position: relative;
     /* top: 2rem; */
 }
