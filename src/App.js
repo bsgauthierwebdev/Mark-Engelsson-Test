@@ -16,7 +16,6 @@ function App() {
     <div className = 'App'>
       <div className = 'container'>
         <BrowserRouter>
-          <h1>Mark Engellson</h1>
           <div className = 'Navigation'>
             <Navigation />
           </div>

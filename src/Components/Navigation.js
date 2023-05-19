@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className = 'Navigation-third'>
           <Link to = '/'>
             <span className = 'Navigation-link'>
-              Mark Engellson Blog
+              Mark Engellson
             </span>
           </Link>
         </div>

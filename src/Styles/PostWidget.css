@@ -1,0 +1,57 @@
+.PostWidget {
+    /* bg-white shadow-lg rounded-lg p-8 mb-8 */
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.PostWidget-header {
+    /* text-xl mb-8 font-semibold border-b pb-4 */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 32px;
+    font-weight: 600;
+    padding-bottom: 16px;
+}
+
+.PostWidget-title {
+    /* flex items-center w-full mb-4 */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.PostWidget-image-container {
+    /* w-16 flex-none */
+    width: 64px;
+    flex: none;
+}
+
+.PostWidget-image {
+    /* align-middle rounded-full */
+    vertical-align: middle;
+    border-radius: 9999px;
+}
+
+.PostWidget-date {
+    /* flex-grow ml-4 */
+    flex-grow: 1;
+    margin-left: 16px;
+}
+
+.PostWidget-link {
+    /* text-md  */
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.PostWidget-date-content {
+    /* text-grey-500 font-xs */
+    color: #6B7280;
+    font-size: 12px;
+    line-height: 16px;
+
+}
