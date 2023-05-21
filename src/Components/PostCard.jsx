@@ -53,7 +53,7 @@ const PostCard = () => {
         />
       </div>
       <h1 className = 'PostCard-title'>
-        <Link to = {`/post/${slug}`}>
+        <Link to = {`/blog/posts/${slug}`}>
           {title}
         </Link>
       </h1>
@@ -61,8 +61,6 @@ const PostCard = () => {
         <div className = 'PostCard-author-info'>
           <img
             alt = {author.name}
-            height = '30px'
-            width = '30px'
             className = 'PostCard-author-image'
             src = {author.photo.url}
           />
@@ -83,7 +81,7 @@ const PostCard = () => {
         {content.text.slice(0, 500)}...
       </p>
       <div className = 'PostCard-link'>
-        <Link to = {`/post/${slug}`}>
+        <Link to = {`/blog/posts/${slug}`}>
           <span className = 'PostCard-link-button'>
             Read More
           </span>

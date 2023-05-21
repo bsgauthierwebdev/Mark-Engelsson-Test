@@ -72,6 +72,16 @@
     /* align-middle rounded-full  */
     vertical-align: middle;
     border-radius: 9999px;
+    align-items: center;
+}
+
+/* .PostCard-author-image img {
+    height: 30px;
+    width: auto;
+} */
+
+img {
+    height: 60px;
 }
 
 .PostCard-author-name {

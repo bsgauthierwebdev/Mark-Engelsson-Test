@@ -49,7 +49,7 @@ const PostWidget = () => {
             <p className = 'PostWidget-date-content'>
               {moment(createdAt).format('DD MMM, YYYY')}
             </p>
-            <Link to = {`/post/${slug}`} key = {title} className = 'PostWidget-link'>
+            <Link to = {`/blog/posts/${slug}`} key = {title} className = 'PostWidget-link'>
               {title}
             </Link>
           </div>
