@@ -15,4 +15,17 @@ const Books = () => {
   )
 }
 
+// const Books = () => {
+//   return (
+//     <div className = 'books-container'>
+//       <div className = 'books-component' style={{backgroundColor: "coral"}}>A</div>
+//       <div className = 'books-component' style={{backgroundColor: "lightblue"}}>B</div>
+//       <div className = 'books-component' style={{backgroundColor: "khaki"}}>C</div>
+//       <div className = 'books-component' style={{backgroundColor: "pink"}}>D</div>
+//       <div className = 'books-component' style={{backgroundColor: "lightgray"}}>E</div>
+//       <div className = 'books-component' style={{backgroundColor: "lightgreen"}}>F</div>
+//     </div>
+//   )
+// }
+
 export default Books
