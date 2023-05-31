@@ -3,37 +3,39 @@
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    border-style: solid;
 
     .Landing-header {
         font-size: 24px;
         padding: 0 16px;
-        background-color: lightgray;
-        border-style: solid;
+        background-color: rgb(234, 234, 235);
+        width: 560px;
+        text-align: center;
+        border-radius: 30px;
+        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
     }
 
     .Landing-content {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: top;
         margin: 16px;
-        border-style: solid;
+        max-width: 600px;
 
         .Landing-content-image {
             flex: 1;
             margin-right: 16px;
-            border-style: solid;
 
             img {
-                // height: 280px;
-                width: auto;
-                border-style: solid;
+                width: 250px;
+                height: auto;
+                border-radius: 15px;
+                box-shadow:5px 10px 10px rgba(0, 0, 0, 0.5)
             }
         }
 
         .Landing-content-text {
             flex: 1;
-            border-style: solid;
+            box-shadow:5px 10px 10px rgba(0, 0, 0, 0.5)
         }
     }
 }
