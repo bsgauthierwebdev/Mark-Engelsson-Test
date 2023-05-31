@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-import '../Styles/About.css'
+import '../Styles/About.scss'
 
 const GET_AUTHOR = gql`
   query AuthorInfo {
@@ -44,4 +44,4 @@ const About = () => {
   ))
 }
 
-export default About 
+export default About

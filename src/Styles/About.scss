@@ -1,0 +1,37 @@
+.About {
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.5rem;
+
+    .About-container-name {
+        height: 160px;
+        text-align: center;
+        vertical-align: center;
+    }
+
+    .About-container-content {
+        padding: 20px;
+        margin: 0;
+
+        .About-container-photo {
+            img {
+                height: 360px;
+                float: left;
+                shape-outside: url('https://media.graphassets.com/iMGAF3oaTTU0B0PZydVA');
+                margin-top: 150px;
+                shape-margin: 30px;
+            }
+        }
+
+        .About-container-bio {
+            text-align: justify;
+            font-size: 20px;
+            line-height: 36px;
+        }
+    }
+}
+
+
+
