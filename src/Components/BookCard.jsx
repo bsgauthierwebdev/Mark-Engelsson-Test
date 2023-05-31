@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { Link } from'react-router-dom'
-import '../Styles/BookCard.css'
+import '../Styles/BookCard.scss'
 
 const GET_BOOK_CARD = gql`
   query GetBooks {
@@ -17,38 +17,27 @@ const GET_BOOK_CARD = gql`
 `
 
 const BookCard = () => {
-  const { loading, error, data } = useQuery(GET_BOOK_CARD)
-  if (loading) return <p>Loading...</p>
-  if (error) console.log(error)
+  const {loading, error, data} = useQuery(GET_BOOK_CARD)
 
-  console.log(data)
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>{error}</p>
 
   return data.books.map((
-    {
-        title,
-        description,
-        purchaseLink,
-        cover
-    }
+    {title, description, purchaseLink, cover}
   ) => (
     <div className = 'BookCard'>
-      <div className = 'BookCard-container'>
-        <div className = 'BookCard-card'>
-          <div className = 'BookCard-card-layout'>
-            <div className = 'BookCard-card-layout-title'>
-              <h3>{title}</h3>
-            </div>
-            <div className = 'BookCard-card-layout-image'>
-              <img 
-                src = {cover.url}
-                alt = {title}
-                style = {{height: 280}}
-              />
-            </div>
-            <div className = 'BookCard-card-layout-description'>
-              <p>{description}</p>
-            </div>
-          </div>
+      <Link to = {purchaseLink} target = '_blank' className = 'BookCard-title'>{title}</Link>
+      {/* <header className = 'BookCard-title'>{title}</header> */}
+      <div className = 'BookCard-content'>
+        <div className = 'BookCard-image'>
+          <img 
+            src = {cover.url}
+            alt = {title}
+            key = {title}
+          />
+        </div>
+        <div className = 'BookCard-description'>
+          <p>{description}</p>
         </div>
       </div>
     </div>
