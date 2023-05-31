@@ -1,31 +1,31 @@
 import React from 'react'
+import { useQuery, gql } from '@apollo/client'
 import BookCard from '../Components/BookCard'
-import '../Styles/Books.css'
+import '../Styles/Books.scss'
+
+const GET_BOOK_CARD = gql`
+  query GetBooks {
+    books {
+        title
+        description
+        purchaseLink
+        cover {
+            url
+        }
+    }
+  }
+`
 
 const Books = () => {
   return (
     <div className = 'Books'>
-      <h1>BOOKS</h1>
-        <div className = 'Books-content'>
-          <div className = 'Books-content-container'>
-            <BookCard />
-          </div>
-        </div>
+      <header className = 'Books-header'>
+        <h1>BOOKS</h1>
+      </header>
+      <div className = 'Books-cards'>
+        <BookCard />
+      </div>
     </div>
   )
 }
-
-// const Books = () => {
-//   return (
-//     <div className = 'books-container'>
-//       <div className = 'books-component' style={{backgroundColor: "coral"}}>A</div>
-//       <div className = 'books-component' style={{backgroundColor: "lightblue"}}>B</div>
-//       <div className = 'books-component' style={{backgroundColor: "khaki"}}>C</div>
-//       <div className = 'books-component' style={{backgroundColor: "pink"}}>D</div>
-//       <div className = 'books-component' style={{backgroundColor: "lightgray"}}>E</div>
-//       <div className = 'books-component' style={{backgroundColor: "lightgreen"}}>F</div>
-//     </div>
-//   )
-// }
-
 export default Books

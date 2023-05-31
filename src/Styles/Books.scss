@@ -1,0 +1,25 @@
+.Books {
+  justify-content: center;
+  text-align: center;
+  
+  .Books-header {
+    // border-bottom: 5px solid darkgray;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 450px;
+    background-color: rgb(234, 234, 235);
+    border-radius: 15px;
+  }
+
+  .Books-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+  }
+}
+
+
+
