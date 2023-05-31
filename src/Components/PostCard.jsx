@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-import '../Styles/PostCard.css'
+// import '../Styles/PostCard.css'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 

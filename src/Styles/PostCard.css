@@ -81,7 +81,7 @@
 } */
 
 img {
-    height: 60px;
+    /* height: 60px; */
 }
 
 .PostCard-author-name {
@@ -162,7 +162,7 @@ img {
     .PostCard-img-content {
         object-position: top;
         position: absolute;
-        height: 80px;
+        /* height: 80px; */
         width: full;
         object-fit: cover;
         box-shadow: 10px 10px 10px 0px #888888;
