@@ -41,19 +41,14 @@ const PostCard = () => {
       
     }) => (
     <div className = 'PostCard'>
-      {/* <div className = 'PostCard-img-box'>
-        <img
-          className = 'PostCard-img-content'
-          src = {featuredImage.url}
-          alt = {title}
-          key = {id}
-        />
-      </div> */}
       <h1 className = 'PostCard-title'>
         <Link to = {`/blog/posts/${slug}`}>
           {title}
         </Link>
       </h1>
+      <div className = 'PostCard-excerpt'>
+        <p>{content.text.slice(0, 500)}...</p>
+      </div>
       <div className = 'PostCard-author'>
         <div className = 'PostCard-author-info'>
           <img
@@ -74,9 +69,6 @@ const PostCard = () => {
           </span>
         </div>
       </div>
-      <p className = 'PostCard-excerpt'>
-        {content.text.slice(0, 500)}...
-      </p>
       <div className = 'PostCard-link'>
         <Link to = {`/blog/posts/${slug}`}>
           <span className = 'PostCard-link-button'>
