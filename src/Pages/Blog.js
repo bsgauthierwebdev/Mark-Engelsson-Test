@@ -1,6 +1,6 @@
 import React from 'react'
 import {Categories, PostCard, PostWidget} from '../Components'
-import '../Styles/Blog.css'
+import '../Styles/Blog.scss'
 
 const Blog = () => {
   return (
@@ -10,16 +10,15 @@ const Blog = () => {
         <div className = 'Blog-posts'>
           <PostCard />
         </div>
-        <div className = 'Blog-recent'>
+        {/* <div className = 'Blog-recent'>
           <div className = 'Blog-recent-content'>
             <PostWidget />
             <Categories />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
 }
 
 export default Blog
-
