@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-// import '../Styles/PostCard.css'
+import '../Styles/PostCard.scss'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
@@ -20,9 +20,6 @@ const GET_POST_CARD = gql`
           content {
             text
           }
-          featuredImage {
-              url
-          }
         }
     }
 `
@@ -41,17 +38,17 @@ const PostCard = () => {
       id,
       slug,
       content,
-      featuredImage
+      
     }) => (
     <div className = 'PostCard'>
-      <div className = 'PostCard-img-box'>
+      {/* <div className = 'PostCard-img-box'>
         <img
           className = 'PostCard-img-content'
           src = {featuredImage.url}
           alt = {title}
           key = {id}
         />
-      </div>
+      </div> */}
       <h1 className = 'PostCard-title'>
         <Link to = {`/blog/posts/${slug}`}>
           {title}
