@@ -78,20 +78,7 @@ const PostDetail = () => {
         <h1 className = 'PostDetail-title'>
           {data.post.title}
         </h1>
-        {console.log(data.post.content.raw)}
-        {data.post.content.raw.children.map((typeObj, index) => {
-          const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
-
-          return getContentFragment(index, children, typeObj, typeObj.type)
-        })}
         <div className = 'PostDetail-container-two'>
-          <div className = 'PostDetail-author-info'>
-            <img
-              alt = {data.post.author.name}
-              className = 'PostDetail-author-image'
-              src = {data.post.author.photo.url}
-            />
-          </div>
           <div className = 'PostDetail-date'>
             <svg xmlns="http://www.w3.org/2000/svg" className="PostDetail-date-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -101,6 +88,12 @@ const PostDetail = () => {
             </span>
           </div>
         </div>
+        {console.log(data.post.content.raw)}
+        {data.post.content.raw.children.map((typeObj, index) => {
+          const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
+
+          return getContentFragment(index, children, typeObj, typeObj.type)
+        })}
       </div>
     </div>
   )
