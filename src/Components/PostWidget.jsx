@@ -11,9 +11,6 @@ const GET_RECENT_POSTS = gql`
       last: 3
       ) {
         title
-        featuredImage {
-          url
-        }
         createdAt
         slug
       }
@@ -32,19 +29,10 @@ const PostWidget = () => {
       </h3>
       {data.posts.map((
         {
-          title, featuredImage, createdAt, slug
+          title, createdAt, slug
         }
       ) => (
         <div key = {title} className = 'PostWidget-title'>
-          <div className = 'PostWidget-image-container'>
-            <img 
-              alt = {title}
-              height = '45px'
-              width = '60px'
-              className = 'PostWidget-image'
-              src = {featuredImage.url}
-            />
-          </div>
           <div className = 'PostWidget-date'>
             <p className = 'PostWidget-date-content'>
               {moment(createdAt).format('DD MMM, YYYY')}
