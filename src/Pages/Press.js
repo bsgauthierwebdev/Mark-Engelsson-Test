@@ -1,43 +1,20 @@
 import React from 'react'
-import { useQuery, gql } from '@apollo/client'
+import PressCard from '../Components/PressCard'
 import '../Styles/Press.css'
 
-const GET_PRESS = gql`
-  query GetPressDetails {
-    presses {
-      name
-      organization
-      quote
-    }
-  }
-`
-
 const Press = () => {
-  const {loading, error, data} = useQuery(GET_PRESS)
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>{error}</p>
-  
-  console.log(data)
-
-  return data.presses.map((
-    {
-      quote,
-      name,
-      organization,
-    }
-  ) => (
+  return (
     <div className = 'Press'>
-      <div className = 'text-bubble'>
-        {quote}
+      <div className = 'Press-header'>
+        <div className = 'Press-subheader'>
+          <h1>PRESS</h1>  
+        </div>
       </div>
-      <div className = 'contributor'>
-        <p>{name}</p>
-        <p>{organization}</p>
+      <div className = 'Press-cards'>
+        <PressCard />
       </div>
     </div>
-  ))
-
+  )
 }
 
 export default Press
