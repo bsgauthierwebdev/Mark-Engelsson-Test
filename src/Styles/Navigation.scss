@@ -31,7 +31,9 @@
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.5rem;
-    color: white
+    color: white;
+    gap: 10px;
+
 }
 
 .Navigation-categories {
@@ -58,5 +60,8 @@
         margin-left: 1rem;
         font-weight: 600;
         cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 }
