@@ -26,7 +26,7 @@ const About = () => {
   if (loading) return <p>Loading...</p>
   if (error) return <p>{error}</p>
 
-  // console.log(data)
+  console.log(data)
   
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text
