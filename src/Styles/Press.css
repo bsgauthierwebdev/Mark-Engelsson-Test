@@ -1,0 +1,45 @@
+.Press {
+    width: 75%;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.text-bubble {
+    position: relative;
+    width: 700px;
+    text-align: justify;
+    line-height: 20px;
+    margin: 40px auto;
+    background-color: #f5f2f2;
+    border: 6px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: large;
+}
+
+.text-bubble:before,
+.text-bubble:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.text-bubble:before {
+    left: 75px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: black transparent transparent black;
+}
+
+.text-bubble:after {
+    left: 83px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: #f5f2f2 transparent transparent #f5f2f2;
+}
+
+.contributor {
+    margin-left: 175px;
+    padding-top: 10px;
+}
