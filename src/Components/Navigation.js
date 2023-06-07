@@ -1,18 +1,6 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
-import '../Styles/Navigation.css'
-
-const categories = [
-  {
-    name: 'React',
-    slug: 'react'
-  },
-
-  {
-    name: 'Books',
-    slug: 'books'
-  }
-]
+import '../Styles/Navigation.scss'
 
 const Navigation = () => {
   return (
@@ -21,7 +9,7 @@ const Navigation = () => {
         <div className = 'Navigation-third'>
           <Link to = '/'>
             <span className = 'Navigation-link'>
-              Mark Engellson
+              Mark Engelsson
             </span>
           </Link>
         </div>
@@ -33,13 +21,6 @@ const Navigation = () => {
             <Link to = '/contact'>Contact</Link>
             <Link to = '/blog'>Blog</Link>
           </span>
-          {/* {categories.map((category) => (
-            <Link to = {`/category/${category.slug}`} key = {category.slug}>
-              <span className = 'Navigation-categories-link'>
-                {category.name}
-              </span>
-            </Link>
-          ))} */}
         </div>
       </div>
     </div>
