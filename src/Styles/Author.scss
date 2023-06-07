@@ -1,0 +1,35 @@
+.Author {
+    // text-center mt-20 mb-8 p-12 relative rounded-lg bg-black bg-opacity-20
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    padding: 48px;
+    position: relative;
+    border-radius: 8px;
+    background-color: lightgray;
+
+    .Author-info {
+        // absolute left-0 right-0 -top-14
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -56px;
+
+        .Author-info-image {
+            // align-middle rounded-full
+            height: 75px;
+            width: 75px;
+            vertical-align: middle;
+            border-radius: 9999px;
+        }
+
+        .Author-info-text {
+            // text-white my-4 text-xl font-bold
+            margin-top: 16px;
+            margin-bottom: 16px;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+    }
+}
