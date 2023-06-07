@@ -1,20 +1,6 @@
 import React from 'react'
-import { useQuery, gql } from '@apollo/client'
 import BookCard from '../Components/BookCard'
 import '../Styles/Books.scss'
-
-const GET_BOOK_CARD = gql`
-  query GetBooks {
-    books {
-        title
-        description
-        purchaseLink
-        cover {
-            url
-        }
-    }
-  }
-`
 
 const Books = () => {
   return (
