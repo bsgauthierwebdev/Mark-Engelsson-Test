@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import headshot from '../Images/headshot.jpeg'
 import cover from '../Images/wiwimimcover.jpg'
 import '../Styles/Landing.scss'
@@ -19,10 +20,12 @@ const Landing = () => {
       </div>
       <div className = 'Landing-minibio'>
         <div className = 'minibio-cover'>
-          <img 
-            src = {cover}
-            alt = 'book'
-          />
+          <Link to = 'https://www.amazon.co.uk/What-If-Whats-Inside-Isnt-ebook/dp/B0BST82LXY/' target = '_blank'>
+            <img 
+              src = {cover}
+              alt = 'book'
+            />
+          </Link>
         </div>
         <div className = 'minibio-description'>
           <div className = 'minibio-description-quote'>
