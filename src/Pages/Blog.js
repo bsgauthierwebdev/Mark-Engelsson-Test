@@ -12,12 +12,6 @@ const Blog = () => {
         <div className = 'Blog-posts'>
           <PostCard />
         </div>
-        {/* <div className = 'Blog-recent'>
-          <div className = 'Blog-recent-content'>
-            <PostWidget />
-            <Categories />
-          </div>
-        </div> */}
       </div>
     </div>
   )
