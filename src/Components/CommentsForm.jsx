@@ -1,4 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
+import { useMutation, gql } from '@apollo/client'
+import { useParams } from 'react-router-dom'
 import '../Styles/CommentsForm.css'
 
 export const submitComment = async (obj) => {
@@ -18,6 +20,11 @@ const CommentsForm = ({slug}) => {
   const nameEl = useRef()
   const emailEl = useRef()
   const storeDataEl = useRef()
+
+  useEffect(() => {
+    nameEl.current.value = window.localStorage.getItem('name')
+    emailEl.current.value = window.localStorage.getItem('email')
+  }, [])
 
   const handleCommentSubmit = () => {
     setError(false)
@@ -41,6 +48,14 @@ const CommentsForm = ({slug}) => {
       localStorage.removeItem('name', name)
       localStorage.removeItem('email', email)
     }
+
+    submitComment(commentObj)
+      .then((res) => {
+        setShowSuccessMessage(true)
+        setTimeout(() => {
+          setShowSuccessMessage(false)
+        }, 3000)
+      })
 
   }
 
@@ -93,3 +108,52 @@ const CommentsForm = ({slug}) => {
 }
 
 export default CommentsForm
+
+
+
+// const ADD_COMMENT = gql`
+//   mutation AddComment($slug: String!, $text: String!) {
+//     addComment(slug: $slug, text: $text) {
+//       slug
+//       text
+//     }
+//   }
+// `
+
+// const CommentsForm = () => {
+//   const {slug} = useParams()
+//   const [text, setText] = useState('')
+//   const [addComment] = useMutation(ADD_COMMENT)
+
+//   const handleFormSubmit = async (event) => {
+//     event.preventDefault()
+
+//     console.log(text, slug)
+    
+//     try {
+//       const {data} = await addComment({variables: {slug, text}})
+//       console.log('Comment Added: ', data.addComment)
+//     } catch (error) {
+//       console.error('Error adding comment: ', error)
+//     }
+
+//     setText('')
+//   }
+
+//   return (
+//     <div>
+//       <form onSubmit = {handleFormSubmit}>
+//         <textarea 
+//           value = {text}
+//           onChange = {(event) => setText(event.target.value)}
+//           placeholder = 'Enter your comment here'
+//         />
+//         <button type = 'submit'>
+//           Add Comment
+//         </button>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default CommentsForm
