@@ -9,7 +9,6 @@ import Contact from './Pages/Contact';
 import Press from './Pages/Press';
 import PostDetails from './Pages/PostDetails';
 import {Layout} from './Components'
-import TestBlog from './Pages/TestBlog';
 import './Styles/App.css';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
             <Routes>
               <Route path = '/' element = {<Landing />} />
               <Route path = '/about' element = {<About />} />
-              {/* <Route path = '/blog' element = {<TestBlog />} /> */}
               <Route exact path = '/blog' element = {<Blog />} />
               <Route exact path = '/blog/posts/:slug' element = {<PostDetails />} />
               <Route exact path = '/books' element = {<Books />} />
