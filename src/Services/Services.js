@@ -49,3 +49,13 @@ export default function DisplayPosts() {
     return data.posts
     console.log(data.posts);
 }
+
+export const submitComment = async (obj) => {
+    const result = await fetch('/api/comments', {
+        method: 'POST',
+        // headers: {},
+        body: JSON.stringify(obj)
+    })
+
+    return result.json()
+}
