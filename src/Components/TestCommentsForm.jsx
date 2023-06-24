@@ -1,84 +1,49 @@
-import React, { useEffect, useState } from 'react'
-import { useMutation, gql } from '@apollo/client'
-
-const ADD_COMMENT = gql`
-    mutation CreateComment(
-        $name: String!,
-        $email: String!,
-        $comment: String!,
-    ) {
-        createComment(
-            name: $name,
-            email: $email,
-            comment: $comment,
-        )
-        {
-            id
-            name
-            email
-            comment
-        }
-    }
-`
+import React, {useState} from 'react'
 
 const TestCommentsForm = () => {
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [comment, setComment] = useState()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [comment, setComment] = useState('')
 
-    const [addComment, {data, loading, error}] = useMutation(ADD_COMMENT, {
-        variables: {name, email, comment}
-    })
+  const handleCommentSubmission = () => {
+    console.log(name, email, comment)
+  }
 
-    return (
-        <div>
-            {/* {error ? <p>'Something went wrong</p> : null}
-            {loading ? <p>Loading...</p> : null} */}
-            
-            <h1>TestCommentsForm</h1>
+  return (
+    <div>
+      <h2>TestCommentsForm</h2>
+      <div>
+        <textarea 
+          value = {comment}
+          placeholder = 'Comment'
+          onChange = {(e) => setComment(e.target.value)}
+        />
+      </div>
+      <div>
+        <input 
+          type = 'text'
+          value = {name}
+          placeholder = 'Name'
+          onChange = {(e) => setName(e.target.value)}
+        />
+        <input 
+          type = 'email'
+          value = {email}
+          placeholder = 'Email'
+          onChange = {(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div>
+        <button
+          type = 'button'
+          onClick = {handleCommentSubmission}
+        >
+          Submit Comment
+        </button>
+      </div>
+    </div>
 
-            <form
-                onSubmit = {(e) => {
-                    e.preventDefault();
-                    addComment({variables: {
-                        name: name, 
-                        email: email, 
-                        comment: comment
-                    }})
-                }}
-            >
-                <div>
-                    <input 
-                        type = 'text' 
-                        id = 'name'
-                        placeholder = 'Name'
-                        value = {name}
-                        onChange = {(e) => {setName(e.target.value)}}
-                    />
-                </div>
-                <div>
-                    <input 
-                        type = 'text'
-                        id = 'email'
-                        placeholder = 'Email'
-                        value = {email}
-                        onChange = {(e) => {setEmail(e.target.value)}}
-                    />
-                </div>
-                <div>
-                    <textarea 
-                        id = 'comments'
-                        placeholder = 'Comments'
-                        value = {comment}
-                        onChange = {(e) => {setComment(e.target.value)}}
-                    />
-                </div>
-                <button type = 'submit'>
-                    Submit
-                </button>
-            </form>
-        </div>
-    )
+  )
 }
 
 export default TestCommentsForm
