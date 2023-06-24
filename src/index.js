@@ -10,36 +10,36 @@ import { setContext } from 'apollo-link-context';
 
 // const graphqlAPI = process.env.REACT_APP_GRAPHQL_URI
 
-// const httpLink = createHttpLink({
-//   uri: process.env.REACT_APP_GRAPHQL_URI
-// })
+const httpLink = createHttpLink({
+  uri: process.env.REACT_APP_GRAPHQL_URI
+})
 
-// const authLink = setContext((_, {headers}) => {
-//   const token = process.env.GRAPHCMS_TOKEN
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : ''
-//     }
-//   }
-// })
-
-// const client = new ApolloClient({
-//   link: authLink.concat(httpLink),
-//   cache: new InMemoryCache()
-// })
-
-
-
-
-
-
-
+const authLink = setContext((_, {headers}) => {
+  const token = process.env.GRAPHCMS_TOKEN
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : ''
+    }
+  }
+})
 
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URI,
-  cache: new InMemoryCache(),
-});
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+})
+
+
+
+
+
+
+
+
+// const client = new ApolloClient({
+//   uri: process.env.REACT_APP_GRAPHQL_URI,
+//   cache: new InMemoryCache(),
+// });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
