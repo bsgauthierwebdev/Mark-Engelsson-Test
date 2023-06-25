@@ -101,6 +101,6 @@
 
 @media (max-width: 480px) {
     .navigation {
-        width: 365px;
+        max-width: 460px;
     }
 }
