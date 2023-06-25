@@ -97,3 +97,10 @@
         display: block;
     }
 }
+
+
+@media (max-width: 480px) {
+    .navigation {
+        width: 365px;
+    }
+}
