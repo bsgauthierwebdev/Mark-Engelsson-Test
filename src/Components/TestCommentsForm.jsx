@@ -1,12 +1,37 @@
 import React, {useState} from 'react'
+import { useMutation, gql } from '@apollo/client'
+
+const ADD_COMMENT = gql`
+  mutation AddComment($name: String!, $email: String!, $comment: String!) {
+    createComment(data: {
+      name: $name,
+      email: $email,
+      comment: $comment
+    }) {
+      name
+      email
+      comment
+      id
+    }
+  }
+`
 
 const TestCommentsForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [comment, setComment] = useState('')
 
-  const handleCommentSubmission = () => {
-    console.log(name, email, comment)
+  const [addComment, {loading, error, data}] = useMutation(ADD_COMMENT, {
+    variables: {name, email, comment}
+  })
+
+  const handleSubmitComment = (e) => {
+    e.preventDefault()
+    console.log(data)
+    addComment()
+    setName('')
+    setEmail('')
+    setComment('')
   }
 
   return (
@@ -36,7 +61,7 @@ const TestCommentsForm = () => {
       <div>
         <button
           type = 'button'
-          onClick = {handleCommentSubmission}
+          onClick = {handleSubmitComment}
         >
           Submit Comment
         </button>

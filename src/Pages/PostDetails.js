@@ -16,8 +16,8 @@ const PostDetails = () => {
           <PostDetail />
           <Author />
           {/* <CommentsForm /> */}
-          {/* <TestCommentsForm />
-          <Comments /> */}
+          <TestCommentsForm />
+          {/* <Comments /> */}
         </div>
         <div className = 'PostDetails-container-nav'>
           <div className = 'PostDetails-container-nav-content'>
