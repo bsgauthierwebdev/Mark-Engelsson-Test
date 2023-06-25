@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import headshot from '../Images/headshot.jpeg'
 import cover from '../Images/wiwimimcover.jpg'
-import '../Styles/Landing.scss'
+import '../Styles/Landing.css'
 
 const Landing = () => {
   return (

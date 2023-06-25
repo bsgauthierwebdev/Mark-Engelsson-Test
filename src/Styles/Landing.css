@@ -1,0 +1,121 @@
+.Landing {
+    width: 100%;    
+}
+
+.Landing-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Landing-intro-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.Landing-intro-image {
+    height: 300px;
+    width: 300px;
+}
+    
+.Landing-intro-image img {
+    height: 295px;
+    width: 295px;
+}
+
+.Landing-description {
+    text-align: center;
+    font-size: 18px;
+}
+
+.Landing-minibio {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;        
+}
+
+.minibio-cover {
+    width: 400px;
+    text-align: center;
+}
+
+.minibio-cover img {
+    height: 300px;
+}
+
+.minibio-description {
+    width: 400px;
+    text-align: justify;
+}
+
+
+
+/* Styling for mobile phones */
+
+@media (max-width: 480px) {
+    .Landing {
+        width: 100%;
+        margin: auto;
+    }
+
+    .Landing-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Landing-intro-name {
+        text-align: center;
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        border-style: solid;
+    }
+
+    .Landing-intro-image {
+        height: 300px;
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Landing-minibio {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;        
+    }
+
+    .minibio-cover {
+        width: 400px;
+        text-align: center;
+    }
+    
+    .minibio-cover img {
+        height: 300px;
+    }
+    
+    .minibio-description {
+        width: 350px;
+        text-align: left;
+        border-style: solid;
+    }
+
+    .minibio-description-quote {
+        width: 325px;
+    }
+}
