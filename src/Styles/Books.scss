@@ -14,7 +14,9 @@
   }
 
   .Books-cards {
+    width:100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     text-align: left;

@@ -13,10 +13,18 @@
     }
 
     .Blog-content {
+        // width:100%;
+        // display: flex;
+        // justify-content: center;
+        // flex-wrap: wrap;
+        // gap: 30px;
+        // text-align: left;
 
         .Blog-posts {
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
             text-align: left;
         }
