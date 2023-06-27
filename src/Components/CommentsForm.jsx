@@ -1,113 +1,100 @@
-import React, {useState, useRef, useEffect} from 'react'
-import {useParams} from 'react-router-dom'
+import React, {useState} from 'react'
 import { useMutation, gql } from '@apollo/client'
-import { submitComment } from '../Services/Services'
+import '../Styles/CommentsForm.css'
 
 const ADD_COMMENT = gql`
-  mutation CreateComment(
-    $name: String!,
-    $email: String!,
-    $comment: String!,
-    $slug: String!
-  ) {
+  mutation AddComment($name: String!, $email: String!, $comment: String!) {
     createComment(data: {
-        name: $name,
-        email: $email,
-        comment: $comment,
-        post: {
-            connect: {slug: $slug}
-        }
-    })
-    {
-        id
+      name: $name,
+      email: $email,
+      comment: $comment
+    }) {
+      name
+      email
+      comment
+      id
     }
   }
 `
 
 const CommentsForm = () => {
-  const {slug} = useParams()
-
   const [error, setError] = useState(false)
-  const [localStorage, setLocalStorage] = useState(null)
-  const [showSuccessMessage, showErrorMessage] = useState(false)
-  const commentEl = useRef()
-  const nameEl = useRef()
-  const emailEl = useRef()
-  // const storeDataEl = useRef()
+  const [showSuccessMessage, setShowSuccessMessage] = useState(null)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [comment, setComment] = useState('')
 
-  // useEffect(() => {
-  //   nameEl.current.value = window.localStorage.getItem('name')
-  //   emailEl.current.value = window.localStorage.getItem('email')
-  // }, [])
+  const [addComment, {data}] = useMutation(ADD_COMMENT, {
+    variables: {name, email, comment}
+  })
 
-  const handleSubmitComment = () => {
-    setError(false)
-    
-    const {value: comment} = commentEl.current
-    const {value: name} = nameEl.current
-    const {value: email} = emailEl.current
+  // const handleSubmitComment = (e) => {
+  //   e.preventDefault()
+  //   setError(false)
 
-    if (!comment || !name || !email) {
-      setError(true)
-      return
-    }
+  //   if (!name || !email || !comment) {
+  //     setError(true)
+  //     return
+  //   }
 
-    const commentObj = {name, email, comment, slug}
+  //   console.log(data)
+  //   addComment()
+  //   setName('')
+  //   setEmail('')
+  //   setComment('')
+  // }
 
-    console.log(commentObj)
-      // .then((res) => {
-      //   setShowSuccessMessage(true)
-
-      //   setTimeout(() => {
-      //     setShowSuccessMessage(false)
-      //   }, 3000)
-      // })
+  const handleSubmitComment = (e) => {
+    e.preventDefault()
+    console.log(`Name: ${name}, Email: ${email}, Comment: ${comment}`)
+    addComment()
+    setName('')
+    setEmail('')
+    setComment('')
   }
-  
 
   return (
-    <div>
-      <h3>Leave a Comment</h3>
-      <div>
-        <textarea 
-          ref = {commentEl}
+    <div className = 'CommentsForm'>
+      <h3 className = 'CommentsForm-header'>
+        CommentsForm
+      </h3>
+      <div className = 'CommentsForm-comment'>
+        <textarea
+          className = 'CommentsForm-comment-input' 
+          value = {comment}
           placeholder = 'Comment'
           name = 'comment'
+          onChange = {(e) => setComment(e.target.value)}
         />
       </div>
-      <div>
+      <div className = 'CommentsForm-userdata'>
         <input 
+          className = 'CommentsForm-name-input'
           type = 'text'
-          ref = {nameEl}
+          value = {name}
           placeholder = 'Name'
           name = 'name'
+          onChange = {(e) => setName(e.target.value)}
         />
         <input 
+          className = 'CommentsForm-email-input'
           type = 'text'
-          ref = {emailEl}
+          value = {email}
           placeholder = 'Email'
           name = 'email'
+          onChange = {(e) => setEmail(e.target.value)}
         />
       </div>
-      {/* <div>
-          <input 
-            checked={formData.storeData} 
-            onChange={onInputChange} 
-            type="checkbox" 
-            id="storeData" 
-            name="storeData" 
-            value="true" 
-          />
-          <label htmlFor="storeData">
-            Save my information for later
-          </label>
-        </div> */}
-      {error && <p>All fields are required</p>}
-      <div>
-        <button type = 'button' onClick = {handleSubmitComment}>
-          Submit Comment
+      {error && <p className = 'CommentsForm-error-message'>All fields are required</p>}
+      <div className = 'CommentsForm-submit'>
+        <button 
+          type = 'button' 
+          onClick = {handleSubmitComment}
+          className = 'CommentsForm-submit-button'
+        >
+          Add Comment
         </button>
-        {showSuccessMessage && <span>Comment submitted for review...</span>}
+        {showSuccessMessage && <span className = 'CommentsForm-submit-message'>Comment submitted for review...</span>}
       </div>
     </div>
   )

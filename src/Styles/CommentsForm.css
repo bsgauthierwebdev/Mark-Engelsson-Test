@@ -1,6 +1,6 @@
 .CommentsForm {
     /* bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 */
-    background-color: lightgray;
+    background: lightgray;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     padding: 32px;
@@ -9,151 +9,131 @@
 }
 
 .CommentsForm-header {
-    /* text-xl mb-8 font-semibold border-b pb-4 */
-    font-size: 20px;
+    /* text-xl mb-8 font-semibold border-bottom pb-4 */
+    font-style: 20px;
     line-height: 28px;
-    margin-bottom: 32px;
     font-weight: 600;
     border-bottom-width: 1px;
     padding-bottom: 16px;
 }
 
 .CommentsForm-comment {
-    /* grid grid-cols-1 gap-4 mb-4 */
+    /* grid grid-cold-1 gap-4 mb-4 */
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 16px;
     margin-bottom: 16px;
 }
 
-.CommentsForm-sender {
-    /* grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4 */
+.CommentsForm-comment-input {
+    /* p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 */
+    padding: 16px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.CommentsForm-comment-input:focus {
+    outline: none !important;
+    border: 1px solid rgb(229 231 235);
+    box-shadow: 0 0 10px #517ba8;
+    color: rgb(55 65 81);
+}
+
+.CommentsForm-userdata {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     margin-bottom: 16px;
 }
 
-.comment-container {
-    /* p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 */
-    padding: 16px;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    width: 100%;
-    border-radius: 8px;
-    color: #374151;
-}
-
-.comment-container:focus {
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    background-color: #f3f4f6;
-}
-
-.name-container {
-    /* py-2 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 */
+.CommentsForm-name-input {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
+    border: none;
     width: 100%;
     border-radius: 8px;
-    color: #374151;
 }
 
-.name-container:focus {
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    background-color: #f3f4f6;
+.CommentsForm-name-input:focus {
+    outline: none !important;
+    border: 1px solid rgb(229 231 235);
+    box-shadow: 0 0 10px #517ba8;
+    color: rgb(55 65 81);
 }
 
-.email-container {
-    /* py-2 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 */
+.CommentsForm-email-input {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
+    border: none;
     width: 100%;
     border-radius: 8px;
-    color: #374151;
 }
 
-.email-container:focus {
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    background-color: #f3f4f6;
+.CommentsForm-email-input:focus {
+    outline: none !important;
+    border: 1px solid rgb(229 231 235);
+    box-shadow: 0 0 10px #517ba8;
+    color: rgb(55 65 81);
 }
 
-.invalid-input {
+.CommentsForm-error-message {
     /* text-xs text-red-500 */
     font-size: 12px;
     line-height: 16px;
 }
 
-.comment-submit {
+.CommentsForm-submit {
+    /* mt-8 */
     margin-top: 32px;
 }
 
-.comment-button {
-    /* transition duration-500 ease hover:bg-indigo-900 inline-block */
-    /* transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-    display: inline-block;
-    background-color:rgba(35, 6, 116, 0.05) */
-
+.CommentsForm-submit-button {
+    /* transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer */
     transition-duration: 300ms;
     display: inline-block;
     background-color: #3B82F6;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 500;
     border-radius: 9999px;
     color: white;
-    padding-left: 12px;
-    padding-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-top: 3px;
     padding-bottom: 3px;
     cursor: pointer;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.comment-button:hover {
-    background-color: #312e81
+.CommentsForm-submit-button:hover {
+    /* background-color: #312E81; */
+    text-decoration: underline;
+    color: #38393a;
+    font-weight: 600;
 }
 
-.submit-message {
+.CommentsForm-submit-message {
     /* text-xl float-right font-semibold mt-3 text-green-500 */
     font-size: 20px;
     line-height: 28px;
     float: right;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 12px;
-    color: #10b981;
-}
-
-.save-info {
-    /* grid grid-cols-1 gap-4 mb-4 */
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.save-info-label {
-    /* text-gray-500 cursor-pointer */
-    color: #6b7280;
-    cursor: pointer;
-    margin-left: 8px;
+    color: #10B981;
 }
 
 
 
 
+/* Styling for mobile devices */
 
-@media (max-width:640px) {
-    .CommentsForm-sender {
-        /* grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4 */
+@media (max-width: 780px) {
+    .CommentsForm-userdata {
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 16px;
