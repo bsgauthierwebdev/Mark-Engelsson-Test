@@ -16,9 +16,8 @@ const PressCard = () => {
     const {loading, error, data} = useQuery(GET_PRESS)
   
     if (loading) return <p>Loading...</p>
-    if (error) return <p>{error}</p>
+    if (error) return <p>Sorry, we could not complete that request</p>
     
-    console.log(data)
   
     return data.presses.map((
       {

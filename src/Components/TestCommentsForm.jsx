@@ -27,7 +27,6 @@ const TestCommentsForm = () => {
 
   const handleSubmitComment = (e) => {
     e.preventDefault()
-    console.log(data)
     addComment()
     setName('')
     setEmail('')
