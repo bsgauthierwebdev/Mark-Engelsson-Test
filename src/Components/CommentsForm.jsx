@@ -4,19 +4,20 @@ import { useMutation, gql } from '@apollo/client'
 import '../Styles/CommentsForm.css'
 
 const ADD_COMMENT = gql`
-  mutation AddComment($name: String!, $email: String!, $comment: String!, $slug: String!) {
-    createComment(data: {
-      name: $name,
-      email: $email,
-      comment: $comment,
-      post: {connect: {slug: $slug}}
-    }) {
-      id
-      comment
-      name
-      email
+mutation AddComment($comment: String!, $name: String!, $email: String!, $slug: String!) {
+  createComment(
+    data: {name: $name, email: $email, comment: $comment, post: {connect: {slug: $slug}}}
+  ) {
+    comment
+    createdAt
+    email
+    id
+    name
+    post {
+      slug
     }
   }
+}
 `
 
 const CommentsForm = () => {
