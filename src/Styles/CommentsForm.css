@@ -85,6 +85,7 @@
     /* text-xs text-red-500 */
     font-size: 12px;
     line-height: 16px;
+    color: #ef4444;
 }
 
 .CommentsForm-submit {
