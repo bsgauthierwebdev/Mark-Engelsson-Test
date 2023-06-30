@@ -52,6 +52,11 @@ const CommentsForm = () => {
       setEmailError(true)
       return
     }
+    addComment()
+    setShowSuccessMessage(true)
+    setTimeout(() => {
+      setShowSuccessMessage(false)
+    }, 3000)
   }
 
   const handleSubmitComment = (e) => {
@@ -63,7 +68,7 @@ const CommentsForm = () => {
 
     validateForm()
     
-    addComment()
+    // addComment()
     // setName('')
     // setEmail('')
     // setComment('')
