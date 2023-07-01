@@ -149,9 +149,10 @@
 
 
 
-@media (max-width:640px) {
+@media (max-width:480px) {
     .PostCard {
         padding: 0;
+        width: 350px;
     }
 
     .PostCard-img-content {
@@ -195,5 +196,9 @@
         padding-left: 4px;
         padding-right: 4px;
         margin-bottom: 8px; 
+    }
+
+    .PostCard-link {
+        margin-bottom: 16px;
     }
 }
