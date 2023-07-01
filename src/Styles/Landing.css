@@ -11,12 +11,23 @@
 
 .Landing-intro-name {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 300px;
     width: 300px;
     font-size: 36px;
     font-weight: 500;
+    text-align: right;
+}
+
+.Landing-intro-name-1 {
+    width: 300px;
+    text-align: right;
+}
+
+.Landing-intro-name-2 {
+    width: 300px;
     text-align: right;
 }
 
@@ -78,10 +89,20 @@
     .Landing-intro-name {
         text-align: center;
         width: 75%;
-        display: block;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         height: auto;
+    }
+
+    .Landing-intro-name-1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Landing-intro-name-2 {
+        text-align: center;
     }
 
     .Landing-intro-image {

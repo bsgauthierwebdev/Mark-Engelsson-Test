@@ -9,7 +9,12 @@ const Landing = () => {
     <div className = 'Landing'>
       <div className = 'Landing-intro'>
         <div className = 'Landing-intro-name'>
-          <p>Hey everyone! I'm Mark!</p>
+          <div className = 'Landing-intro-name-1'>
+            <p>Hey everyone!</p>
+          </div>
+          <div className = 'Landing-intro-name-2'>
+            <p>I'm Mark!</p>
+          </div>
         </div>
         <div className = 'Landing-intro-image'>
           <img src = {headshot} />
