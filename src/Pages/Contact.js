@@ -23,6 +23,9 @@ const Contact = () => {
 
   return (
     <div className = 'Contact'>
+      <div className = 'Contact-header'>
+        <h1>Contact</h1>
+      </div>
       <div className = 'Contact-container'>
         <form
           ref = {form}

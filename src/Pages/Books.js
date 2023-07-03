@@ -6,7 +6,7 @@ const Books = () => {
   return (
     <div className = 'Books'>
       <header className = 'Books-header'>
-        <h1>BOOKS</h1>
+        <h1>Books</h1>
       </header>
       <div className = 'Books-cards'>
         <BookCard />

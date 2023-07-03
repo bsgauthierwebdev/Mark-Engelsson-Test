@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useParams } from 'react-router-dom'
-import '../Styles/About.scss'
+import '../Styles/About.css'
 
 const GET_AUTHOR_INFO = gql`
   query GetAboutInfo {

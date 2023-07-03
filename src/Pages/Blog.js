@@ -6,7 +6,7 @@ const Blog = () => {
   return (
     <div className = 'Blog'>
       <div className = 'Blog-header'>
-        <h1>BLOG</h1>
+        <h1>Blog</h1>
       </div>
       <div className = 'Blog-content'>
         <div className = 'Blog-posts'>

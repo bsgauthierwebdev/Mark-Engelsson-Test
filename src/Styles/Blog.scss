@@ -3,12 +3,11 @@
     text-align: center;
 
     .Blog-header {
-        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+        font-size: 24px;
+        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
         max-width: 50%;
         margin-bottom: 15px;
         display: inline-block;
-        width: 450px;
-        background-color: rgb(234, 234, 235);
         border-radius: 15px;
     }
 
@@ -38,7 +37,16 @@
 /* Styling for mobile phones */
 
 @media (max-width: 480px) {
-    .Blog-posts {
-        width: 95%;
+    .Blog-header {
+        font-size: 18px;
+        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+        max-width: 50%;
+        margin-bottom: 15px;
+        display: inline-block;
+        border-radius: 15px;
+        
+        .Blog-posts {
+            width: 95%;
+        }
     }
 }

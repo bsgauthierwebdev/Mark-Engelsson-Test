@@ -7,7 +7,7 @@ const Press = () => {
     <div className = 'Press'>
       <div className = 'Press-header'>
         <div className = 'Press-subheader'>
-          <h1>PRESS</h1>  
+          <h1>Press</h1>  
         </div>
       </div>
       <div className = 'Press-cards'>

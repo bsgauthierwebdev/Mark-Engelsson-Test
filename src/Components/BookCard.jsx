@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { Link } from'react-router-dom'
-import '../Styles/BookCard.scss'
+import '../Styles/BookCard.css'
 
 const GET_BOOK_CARD = gql`
   query GetBooks {
