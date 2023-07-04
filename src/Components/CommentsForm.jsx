@@ -67,11 +67,6 @@ const CommentsForm = () => {
     setEmailError(false)
 
     validateForm()
-    
-    // addComment()
-    // setName('')
-    // setEmail('')
-    // setComment('')
   }
 
   return (
