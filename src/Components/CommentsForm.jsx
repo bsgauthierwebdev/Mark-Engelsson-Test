@@ -53,6 +53,10 @@ const CommentsForm = () => {
       return
     }
     addComment()
+    setComment('')
+    // Not sure if I want to clear name and email
+    // setName('')
+    // setEmail('')
     setShowSuccessMessage(true)
     setTimeout(() => {
       setShowSuccessMessage(false)
