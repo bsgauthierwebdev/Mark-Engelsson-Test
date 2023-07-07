@@ -24,9 +24,8 @@ const About = () => {
   })
 
   if (loading) return <p>Loading...</p>
-  if (error) return <p>{error}</p>
+  if (error) return <p>Sorry, we could not complete that request</p>
 
-  console.log(data)
   
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text
@@ -74,7 +73,6 @@ const About = () => {
           </div>
         </div>
         <div className = 'About-bio'>
-          {console.log(data.author.bio.raw)}
           {data.author.bio.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 

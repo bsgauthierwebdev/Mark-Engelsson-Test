@@ -31,9 +31,7 @@ const PostDetail = () => {
   })
 
   if (loading) return <h2>Loading...</h2>
-  if (error) console.log(error)
-
-  console.log(data)
+  if (error) return <p>Sorry, we could not complete that request</p>
 
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text
@@ -88,7 +86,6 @@ const PostDetail = () => {
             </span>
           </div>
         </div>
-        {console.log(data.post.content.raw)}
         {data.post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 

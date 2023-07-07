@@ -24,9 +24,7 @@ const Author = () => {
   })
 
   if (loading) return <h2>Loading...</h2>
-  if (error) console.log(error)
-
-  console.log(data)
+  if (error) return <p>Sorry, we could not complete that request</p>
 
   return (
     <div className = 'Author'>
