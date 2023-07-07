@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useQuery, gql } from '@apollo/client'
 import moment from 'moment'
-import parse from 'html-react-parser'
 import { useParams } from 'react-router-dom'
 import '../Styles/Comments.css'
 
