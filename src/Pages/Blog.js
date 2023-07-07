@@ -1,5 +1,5 @@
 import React from 'react'
-import {Categories, PostCard, PostWidget} from '../Components'
+import {PostCard} from '../Components'
 import '../Styles/Blog.scss'
 
 const Blog = () => {

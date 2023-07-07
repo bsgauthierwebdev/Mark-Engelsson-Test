@@ -17,7 +17,7 @@ const Landing = () => {
           </div>
         </div>
         <div className = 'Landing-intro-image'>
-          <img src = {headshot} />
+          <img src = {headshot} alt = 'headshot' />
         </div>
       </div>
       <div className = 'Landing-description'>

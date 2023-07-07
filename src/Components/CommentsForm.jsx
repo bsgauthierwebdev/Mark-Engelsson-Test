@@ -31,7 +31,7 @@ const CommentsForm = () => {
   const [email, setEmail] = useState('')
   const [comment, setComment] = useState('')
 
-  const [addComment, {data}] = useMutation(ADD_COMMENT, {
+  const [addComment] = useMutation(ADD_COMMENT, {
     variables: {name, email, comment, slug}
   })
 
