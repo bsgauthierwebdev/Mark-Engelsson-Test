@@ -15,7 +15,7 @@
     text-decoration: none;
     color: white;
     font-size: 28px;
-    margin-left: 16px;
+    margin-left: 24px;
 }
 
 .navigation-menu {
@@ -29,7 +29,7 @@
 
 .navigation-menu li {
     list-style-type: none;
-    margin: 0 16px;
+    margin: 0 24px;
 }
 
 .navigation-menu li a {

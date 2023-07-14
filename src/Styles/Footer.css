@@ -1,0 +1,27 @@
+.Footer {
+    color: white;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    /* padding: 20px; */
+    text-align: center;
+    border-top: 1px solid #ccc;
+    /* position: sticky; */
+    bottom: 0;
+}
+
+.Footer-image img {
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+.Footer-newsletter {
+    display: flex;
+    
+    gap: 20px;
+}
+
+.Footer-substack img {
+    height: 60px;
+}
