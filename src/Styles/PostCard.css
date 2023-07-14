@@ -28,11 +28,12 @@
     max-width: 85%;
     font-size: 24px;
     padding: 0 16px;
-    background-color: rgb(234, 234, 235);
+    /* background-color: rgb(234, 234, 235); */
     width: 560px;
     text-align: center;
     border-radius: 30px;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
 
 .PostCard-title:hover {
