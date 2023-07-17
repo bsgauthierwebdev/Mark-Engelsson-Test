@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Books from './Pages/Books';
 import Contact from './Pages/Contact';
+import Footer from './Components/Footer';
 import Press from './Pages/Press';
 import PostDetails from './Pages/PostDetails';
 import {Layout} from './Components'
@@ -32,6 +33,7 @@ function App() {
           </div>
         </BrowserRouter>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,20 @@
 .Footer {
     color: white;
     background-color: black;
-    height: 80px;
+    height: 100px;
     display: flex;
-    /* padding: 20px; */
+    justify-content: space-between;
+    padding: 20px;
     text-align: center;
     border-top: 1px solid #ccc;
-    /* position: sticky; */
+    position: sticky;
     bottom: 0;
+}
+
+.Footer-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Footer-image img {
@@ -18,10 +25,31 @@
 
 .Footer-newsletter {
     display: flex;
-    
     gap: 20px;
 }
 
+.Footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-substack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Footer-substack img {
+    height: 60px;
+}
+
+.Footer-linktree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-linktree img {
     height: 60px;
 }
