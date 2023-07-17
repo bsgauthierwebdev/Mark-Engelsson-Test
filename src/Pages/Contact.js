@@ -1,6 +1,15 @@
 import React, {useRef} from 'react'
 import emailjs from 'emailjs-com'
-import '../Styles/Contact.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAmazon, faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import amazon from '../Images/amazon.png'
+import facebook from '../Images/facebook.png'
+import instagram from '../Images/instagram.png'
+import linkedin from '../Images/linkedin.png'
+import linktree from '../Images/linkedin.png'
+import substack from '../Images/substack.png'
+import twitter from '../Images/twitter.png'
+import '../Styles/Contact.css'
 
 const Contact = () => {
   const form = useRef()
@@ -72,7 +81,49 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      
+      <div className = 'Contact-links'>
+        <div className = 'Contact-links-text'>
+          <p>Find me online</p>
+        </div>
+        <div className = 'Contact-links-icons'>
+          <a href = 'https://www.amazon.co.uk/Mark-Engelsson/e/B0BSTBB4QH'>
+            <img 
+              src = {amazon}
+              alt = 'amazon'
+            />
+          </a>
+          <a href = 'https://markengelssonwrites.substack.com/'>
+            <img 
+              src = {substack}
+              alt = 'substack'
+            />
+          </a>
+          <a href = 'https://www.facebook.com/markengelssonwrites'>
+            <img 
+              src = {facebook}
+              alt = 'facebook'
+            />
+          </a>
+          <a href = 'https://instagram.com/markengelssonwrites'>
+            <img 
+              src = {instagram}
+              alt = 'instagram'
+            />
+          </a>
+          <a href = 'https://www.linkedin.com/in/mark-engelsson-594728254/'>
+            <img 
+              src = {linkedin}
+              alt = 'linkedin'
+            />
+          </a>
+          <a href = 'https://twitter.com/markengelsson'>
+            <img 
+              src = {twitter}
+              alt = 'twitter'
+            />
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
