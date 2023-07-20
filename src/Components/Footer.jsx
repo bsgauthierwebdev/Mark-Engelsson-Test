@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../Images/MEWLogo.jpg'
+import negativelogo from '../Images/MEWLogo-Negative.jpg'
 import substack from '../Images/substack.png'
 import linktree from '../Images/linktree.png'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,7 +17,7 @@ const Footer = () => {
     <div className = 'Footer'>
       <div className = 'Footer-image'>
         <img 
-          src = {logo}
+          src = {negativelogo}
         />
       </div>
       <div className = 'Footer-copyright'>
