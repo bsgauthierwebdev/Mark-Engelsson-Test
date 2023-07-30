@@ -2,13 +2,14 @@
     color: white;
     background-color: black;
     height: 100px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     text-align: center;
     border-top: 1px solid #ccc;
-    position: sticky;
+    position: fixed;
     bottom: 0;
 }
 
@@ -54,4 +55,23 @@
 
 .Footer-linktree img {
     height: 60px;
+}
+
+@media (max-width: 768px) {
+    .Footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Footer-image img {
+        height: 50px;
+    }
+
+    .Footer-substack {
+        display: none;
+    }
+    
+    .Footer-linktree {
+        display: none;
+    }
 }
