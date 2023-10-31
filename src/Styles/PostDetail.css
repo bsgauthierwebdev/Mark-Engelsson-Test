@@ -76,6 +76,10 @@
     margin-bottom: 4px;
 }
 
+.post-image {
+    max-height: 40vh;
+}
+
 
 
 

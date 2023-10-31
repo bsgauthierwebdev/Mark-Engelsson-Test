@@ -58,10 +58,11 @@ const PostDetail = () => {
       case 'image':
         return (
           <img
+            className = 'post-image'
             key={index}
             alt={obj.title}
             height={obj.height}
-            width={obj.width}
+            // width={obj.width}
             src={obj.src}
           />
         );
