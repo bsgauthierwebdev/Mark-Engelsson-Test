@@ -37,6 +37,12 @@
     align-items: center;
 }
 
+.Footer-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Footer-substack {
     display: flex;
     justify-content: center;
@@ -54,6 +60,16 @@
 }
 
 .Footer-linktree img {
+    height: 60px;
+}
+
+.Footer-design-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-design-logo img {
     height: 60px;
 }
 

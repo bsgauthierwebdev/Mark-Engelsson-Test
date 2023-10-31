@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../Images/MEWLogo.jpg'
+import designLogo from '../Images/brent-s-gauthier-logo.png'
 import negativelogo from '../Images/MEWLogo-Negative.jpg'
 import substack from '../Images/substack.png'
 import linktree from '../Images/linktree.png'
@@ -21,7 +22,10 @@ const Footer = () => {
         />
       </div>
       <div className = 'Footer-copyright'>
-        <span>&copy; 2023 Mark Engelsson</span>
+        <span>Content &copy; 2023 Mark Engelsson</span>
+      </div>
+      <div className="Footer-design">
+        <span>Design &copy; 2023 Brent S. Gauthier</span>
       </div>
       <div className = 'Footer-substack'>
         <span>Find more of my writings at my Substack</span>
@@ -32,7 +36,11 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className = 'Footer-linktree'>
+      {/* <div className = 'Footer-design-logo'>
+        <span>Design by </span>
+        <img src = {designLogo} alt = 'Brent S Gauthier' />
+      </div> */}
+      {/* <div className = 'Footer-linktree'>
         <span>Check out my Linktree</span>
         <a href = 'https://linktr.ee/markengelssonwrites'>
           <img 
@@ -40,7 +48,7 @@ const Footer = () => {
             alt = 'linktree' 
           />
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }
