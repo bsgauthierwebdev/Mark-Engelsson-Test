@@ -83,7 +83,7 @@ const Contact = () => {
       </div>
       <div className = 'Contact-links'>
         <div className = 'Contact-links-text'>
-          <p>Find me online</p>
+          <p>Find my works online</p>
         </div>
         <div className = 'Contact-links-icons'>
           <a href = 'https://www.amazon.co.uk/Mark-Engelsson/e/B0BSTBB4QH'>
@@ -98,7 +98,7 @@ const Contact = () => {
               alt = 'substack'
             />
           </a>
-          <a href = 'https://www.facebook.com/markengelssonwrites'>
+          {/* <a href = 'https://www.facebook.com/markengelssonwrites'>
             <img 
               src = {facebook}
               alt = 'facebook'
@@ -121,7 +121,7 @@ const Contact = () => {
               src = {twitter}
               alt = 'twitter'
             />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
