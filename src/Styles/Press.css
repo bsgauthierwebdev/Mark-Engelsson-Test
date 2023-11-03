@@ -11,8 +11,7 @@
 
 .Press-subheader {
     font-size: 24px;
-    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-    /* max-width: 75%; */
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);    /* max-width: 75%; */
     margin-bottom: 15px;
     border-radius: 15px;
 }

@@ -6,7 +6,7 @@
 
     .Blog-header {
         font-size: 24px;
-        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
         max-width: 50%;
         margin-bottom: 15px;
         display: inline-block;
@@ -41,8 +41,7 @@
 @media (max-width: 480px) {
     .Blog-header {
         font-size: 18px;
-        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-        max-width: 50%;
+        text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);        max-width: 50%;
         margin-bottom: 15px;
         display: inline-block;
         border-radius: 15px;
