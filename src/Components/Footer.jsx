@@ -1,4 +1,5 @@
 import React from 'react'
+import emailjs from 'emailjs-com'
 import logo from '../Images/MEWLogo.jpg'
 import designLogo from '../Images/brent-s-gauthier-logo.png'
 import negativelogo from '../Images/MEWLogo-Negative.jpg'
@@ -10,6 +11,7 @@ import linktree from '../Images/linktree.png'
 // import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import '../Styles/Footer.css'
 import { Link } from 'react-router-dom'
+import NewsletterSignup from './NewsletterSignup'
 
 const Footer = () => {
   // let copy = [%raw {|'\u00a9'|}];
@@ -21,13 +23,19 @@ const Footer = () => {
           src = {negativelogo}
         />
       </div>
+      <div className="Footer-newsletter">
+        <NewsletterSignup />
+        {/* <p>Sign up for my newsletter to get the latest updates</p>
+        <input type="text" placeholder = 'email address' name = 'email' className = 'newsletter-request' />
+        <button>Submit</button> */}
+      </div>
       <div className = 'Footer-copyright'>
         <span>Content &copy; 2023 Mark Engelsson</span>
       </div>
-      <div className="Footer-design">
+      {/* <div className="Footer-design">
         <span>Design &copy; 2023 Brent S. Gauthier</span>
-      </div>
-      <div className = 'Footer-substack'>
+      </div> */}
+      {/* <div className = 'Footer-substack'>
         <span>Find more of my writings at my Substack</span>
         <a href = 'https://markengelssonwrites.substack.com/' target = '_blank'>
           <img 
@@ -35,7 +43,7 @@ const Footer = () => {
             alt = 'substack'
           />
         </a>
-      </div>
+      </div> */}
       {/* <div className = 'Footer-design-logo'>
         <span>Design by </span>
         <img src = {designLogo} alt = 'Brent S Gauthier' />

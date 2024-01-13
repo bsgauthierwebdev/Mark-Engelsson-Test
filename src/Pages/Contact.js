@@ -25,9 +25,27 @@ const Contact = () => {
     )
     .then((result) => {
       console.log(result.text)
+      // form.current.elements['subject', 'message'].value = ''
     }, (error) => {
       console.log(error.text)
     })
+  }
+
+  const sendSignup = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_NEWSLETTER_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+    )
+    .then((result) => {
+        console.log(result.text)
+        form.current.reset()
+      }, (error) => {
+        console.log(error.text)
+      })
   }
 
   return (
@@ -81,6 +99,27 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      <div className="Contact-newsletter">
+        <p>Sign up for my newsletter</p>
+        <form ref = {form} onSubmit = {sendSignup}> 
+          <div className = 'email-input'>
+              <input 
+                type = 'email'
+                placeholder = 'Email'
+                name = 'email'
+                className = 'email-input-box'
+              />
+            </div>
+            <div className = 'submit'>
+            <button 
+              className = 'submit-button'
+              type = 'submit'
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
       <div className = 'Contact-links'>
         <div className = 'Contact-links-text'>
           <p>Find my works online</p>
@@ -92,31 +131,25 @@ const Contact = () => {
               alt = 'amazon'
             />
           </a>
-          <a href = 'https://markengelssonwrites.substack.com/'>
-            <img 
-              src = {substack}
-              alt = 'substack'
-            />
-          </a>
           {/* <a href = 'https://www.facebook.com/markengelssonwrites'>
             <img 
               src = {facebook}
               alt = 'facebook'
             />
-          </a>
+          </a> */}
           <a href = 'https://instagram.com/markengelssonwrites'>
             <img 
               src = {instagram}
               alt = 'instagram'
             />
           </a>
-          <a href = 'https://www.linkedin.com/in/mark-engelsson-594728254/'>
+          {/* <a href = 'https://www.linkedin.com/in/mark-engelsson-594728254/'>
             <img 
               src = {linkedin}
               alt = 'linkedin'
             />
-          </a>
-          <a href = 'https://twitter.com/markengelsson'>
+          </a> */}
+          {/* <a href = 'https://twitter.com/markengelsson'>
             <img 
               src = {twitter}
               alt = 'twitter'

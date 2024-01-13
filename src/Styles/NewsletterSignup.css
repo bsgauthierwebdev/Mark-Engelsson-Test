@@ -1,0 +1,25 @@
+.NewsletterSignup {
+    border: solid 1px white;
+    display: flex;
+    flex-direction: row;
+}
+
+.Newsletter-Header {
+    font-size: 14px;
+}
+
+.Newsletter-Container {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.Signup-container {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: solid 1px red;
+}
