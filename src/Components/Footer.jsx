@@ -24,16 +24,15 @@ const Footer = () => {
         />
       </div>
       <div className="Footer-newsletter">
-        <NewsletterSignup />
-        {/* <p>Sign up for my newsletter to get the latest updates</p>
-        <input type="text" placeholder = 'email address' name = 'email' className = 'newsletter-request' />
-        <button>Submit</button> */}
+        <Link to = '/contact'>
+            Sign up for my newsletter
+        </Link>
       </div>
       <div className = 'Footer-copyright'>
-        <span>Content &copy; 2023 Mark Engelsson</span>
+        <span>Content &copy; 2024 Mark Engelsson</span>
       </div>
       {/* <div className="Footer-design">
-        <span>Design &copy; 2023 Brent S. Gauthier</span>
+        <span>Design &copy; 2024 Brent S. Gauthier</span>
       </div> */}
       {/* <div className = 'Footer-substack'>
         <span>Find more of my writings at my Substack</span>
