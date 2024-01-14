@@ -31,9 +31,10 @@ function App() {
               <Route path = '/press' element = {<Press />} />
             </Routes>
           </div>
+          <Footer />
+
         </BrowserRouter>
       </div>
-      <Footer />
     </div>
   );
 }
