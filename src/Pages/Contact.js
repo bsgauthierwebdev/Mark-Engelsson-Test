@@ -13,6 +13,7 @@ import '../Styles/Contact.css'
 
 const Contact = () => {
   const form = useRef()
+  const newsletterForm = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -37,12 +38,12 @@ const Contact = () => {
     emailjs.sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_NEWSLETTER_TEMPLATE_ID,
-        form.current,
+        newsletterForm.current,
         process.env.REACT_APP_PUBLIC_KEY
     )
     .then((result) => {
         console.log(result.text)
-        form.current.reset()
+        newsletterForm.current.reset()
       }, (error) => {
         console.log(error.text)
       })
@@ -101,7 +102,7 @@ const Contact = () => {
       </div>
       <div className="Contact-newsletter">
         <p>Sign up for my newsletter</p>
-        <form ref = {form} onSubmit = {sendSignup}> 
+        <form ref = {newsletterForm} onSubmit = {sendSignup}> 
           <div className = 'email-input'>
               <input 
                 type = 'email'
@@ -137,12 +138,12 @@ const Contact = () => {
               alt = 'facebook'
             />
           </a> */}
-          <a href = 'https://instagram.com/markengelssonwrites'>
+          {/* <a href = 'https://instagram.com/markengelssonwrites'>
             <img 
               src = {instagram}
               alt = 'instagram'
             />
-          </a>
+          </a> */}
           {/* <a href = 'https://www.linkedin.com/in/mark-engelsson-594728254/'>
             <img 
               src = {linkedin}
