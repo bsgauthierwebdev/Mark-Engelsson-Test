@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import emailjs from 'emailjs-com'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAmazon, faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -18,6 +18,9 @@ const Contact = () => {
   const form = useRef()
   const newsletterForm = useRef()
 
+  const [showSuccessMessage, setShowSuccessMessage] = useState(null)
+  const [showSubscriptionMessage, setShowSubscriptionMessage] = useState(null)
+
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -29,10 +32,15 @@ const Contact = () => {
     )
     .then((result) => {
       console.log(result.text)
-      // form.current.elements['subject', 'message'].value = ''
+      form.current.elements.subject.value = ''
+      form.current.elements.message.value = ''
     }, (error) => {
       console.log(error.text)
     })
+    setShowSuccessMessage(true)
+    setTimeout(() => {
+      setShowSuccessMessage(false)
+    }, 3000)
   }
 
   const sendSignup = (e) => {
@@ -50,6 +58,10 @@ const Contact = () => {
       }, (error) => {
         console.log(error.text)
       })
+      setShowSubscriptionMessage(true)
+      setTimeout(() => {
+        setShowSubscriptionMessage(false)
+      }, 3000)
   }
 
   return (
@@ -100,6 +112,9 @@ const Contact = () => {
             >
               Send your message
             </button>
+            <div className="successMessage">
+              {showSuccessMessage && <span className = 'CommentsForm-submit-message'>Thank you, I will get back to you shortly.</span>}
+            </div>
           </div>
         </form>
       </div>
@@ -124,6 +139,9 @@ const Contact = () => {
             >
               Subscribe
             </button>
+            <div className="subscription-message">
+              {showSubscriptionMessage && <span className = 'CommentsForm-submit-message'>Thank you for subscribing to my newsletter!</span>}
+            </div>
           </div>
         </form>
       </div>
