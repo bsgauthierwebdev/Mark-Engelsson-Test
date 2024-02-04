@@ -9,6 +9,9 @@ import linkedin from '../Images/linkedin.png'
 import linktree from '../Images/linkedin.png'
 import substack from '../Images/substack.png'
 import twitter from '../Images/twitter.png'
+import bandn from '../Images/B&N-2.png'
+import goodreads from '../Images/goodreads.png'
+import pagebreak from '../Images/pagebreak.png'
 import '../Styles/Contact.css'
 
 const Contact = () => {
@@ -100,6 +103,9 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      <div className="pagebreak">
+        <img src = {pagebreak} alt = 'page break'/>
+      </div>
       <div className="Contact-newsletter">
         <p>Sign up for my newsletter</p>
         <form ref = {newsletterForm} onSubmit = {sendSignup}> 
@@ -121,15 +127,30 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      <div className="pagebreak">
+        <img src = {pagebreak} alt = 'page break'/>
+      </div>
       <div className = 'Contact-links'>
         <div className = 'Contact-links-text'>
           <p>Find my works online</p>
         </div>
         <div className = 'Contact-links-icons'>
-          <a href = 'https://www.amazon.co.uk/Mark-Engelsson/e/B0BSTBB4QH'>
+          <a target = '_blank' href = 'https://www.amazon.co.uk/Mark-Engelsson/e/B0BSTBB4QH'>
             <img 
               src = {amazon}
               alt = 'amazon'
+            />
+          </a>
+          <a target = '_blank' href = 'https://www.barnesandnoble.com/w/what-if-whats-inside-me-isnt-me-mark-engelsson/1143789139?ean=9798368010052'>
+            <img 
+              src = {bandn}
+              alt = 'barnes & noble'
+            />
+          </a>
+          <a target = '_blank' href = 'https://www.goodreads.com/author/show/27556186.Mark_Engelsson'>
+            <img 
+              src = {goodreads}
+              alt = 'goodreads'
             />
           </a>
           {/* <a href = 'https://www.facebook.com/markengelssonwrites'>
