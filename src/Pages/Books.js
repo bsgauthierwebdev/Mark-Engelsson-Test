@@ -1,6 +1,6 @@
 import React from 'react'
 import BookCard from '../Components/BookCard'
-import '../Styles/Books.scss'
+import '../Styles/Books.css'
 
 const Books = () => {
   return (
