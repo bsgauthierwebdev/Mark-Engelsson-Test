@@ -11,7 +11,6 @@ import linktree from '../Images/linktree.png'
 // import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import '../Styles/Footer.css'
 import { Link } from 'react-router-dom'
-import NewsletterSignup from './NewsletterSignup'
 
 const Footer = () => {
   // let copy = [%raw {|'\u00a9'|}];
