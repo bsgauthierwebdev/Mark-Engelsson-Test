@@ -9,7 +9,8 @@
 
 .Contact-header {
     font-size: 24px;
-    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);    max-width: 50%;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);    
+    max-width: 50%;
     margin-bottom: 15px;
     display: inline-block;
     border-radius: 15px;
@@ -68,7 +69,7 @@
     border-width: 0;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     outline: 0;
-    width: 100%;
+    width: 700px;
 }
 
 .email-input-box &::-webkit-input-placeholder {
@@ -146,37 +147,26 @@
 }
 
 .submit-button {
+    transition-duration: 300ms;
+    display: inline-block;
     background-color: #3B82F6;
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 500;
+    border-radius: 9999px;
     color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    outline: 0;
-    margin-right: 4px;
-    margin-bottom: 4px;
-    transition-timing-function: linear;
-    transition-property: all;
-    transition-duration: 150ms;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.submit-button &:active {
-    background-color: #2563EB;
-}
-
-.submit-button &:hover {
-    color: black;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.submit-button &:focus {
-    outline: 0;
+.submit-button:hover {
+    text-decoration: underline;
+    color: #38393a;
+    font-weight: 600;
 }
 
 .Contact-links-icons {
@@ -195,17 +185,14 @@
     width: 75% vw;
 }
 
-/* .thank-you {
-    text-2xl
-     font-size: 24px;
-     line-height: 32px;
- } */;
-
 
 
  /* Styling for Mobile Devices */
 
  @media (max-width: 480px) {
+    .Contact-container {
+        width: 90%;
+    }
     .name-input-box {
         padding-left: 12px;
         padding-right: 12px;
@@ -220,6 +207,30 @@
         border-width: 0;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         outline: 0;
-        width: 400px;
+        width: 100%;
+    }
+
+    .email-input-box {
+        padding-left: 12px;
+        padding-right: 12px;
+        color: #4B5563;
+        position: relative;
+        background-color: white;
+        border-radius: 4px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        border-width: 0;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        outline: 0;
+        width: 100%;
+    }
+
+    .Contact-newsletter {
+        width: 90%;
+    }
+
+    .pagebreak img {
+        width: 75%;
     }
  }
