@@ -23,6 +23,12 @@
     gap: 30px;
 }
 
+.Press-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 
 
 /* Styling for Mobile Devices */
