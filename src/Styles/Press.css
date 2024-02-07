@@ -29,6 +29,10 @@
     justify-content: center;
 }
 
+.Press-images img {
+    height: 75%;
+}
+
 
 
 /* Styling for Mobile Devices */

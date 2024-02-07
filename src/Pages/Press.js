@@ -12,17 +12,12 @@ const Press = () => {
           <h1>Press</h1>  
         </div>
       </div>
-      <div className="Press-images">
-        <div className="Press-image">
-          <img src = {press} alt = 'Speaking' />
-        </div>
-      </div>
       <div className = 'Press-cards'>
         <PressCard />
       </div>
       <div className="Press-images">
         <div className="press-image-no-background">
-          <img src = {pressNoBackground} alt = 'Speaking'/>
+          <img src = {press} alt = 'Speaking'/>
         </div>
       </div>
     </div>
