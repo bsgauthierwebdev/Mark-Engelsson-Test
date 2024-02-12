@@ -66,6 +66,10 @@
         /* width: 100%; */
         max-width: 480px;
         margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .Landing-intro {
@@ -102,6 +106,11 @@
         margin-right: auto;
     }
 
+    .Landing-intro-image img {
+        width: 300px;
+        object-fit: cover;
+    }
+
     .Landing-minibio {
         margin-top: 100px;
         display: flex;
@@ -119,10 +128,11 @@
     }
     
     .minibio-cover img {
-        height: 300px;
-        display: block;
+        width: 300px;
+        object-fit: cover;
+        /* display: block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; */
     }
     
     .minibio-description {
