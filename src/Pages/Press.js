@@ -16,9 +16,7 @@ const Press = () => {
         <PressCard />
       </div>
       <div className="Press-images">
-        <div className="press-image-no-background">
-          <img src = {press} alt = 'Speaking'/>
-        </div>
+        <img src = {press} alt = 'Speaking'/>
       </div>
     </div>
   )
