@@ -12,22 +12,11 @@
 .Landing-intro-name {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 300px;
     width: 300px;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 500;
-    text-align: right;
-}
-
-.Landing-intro-name-1 {
-    width: 300px;
-    text-align: right;
-}
-
-.Landing-intro-name-2 {
-    width: 300px;
     text-align: right;
 }
 
@@ -41,17 +30,13 @@
     /* width: 295px; */
 }
 
-.Landing-description {
-    text-align: center;
-    font-size: 18px;
-}
-
 .Landing-minibio {
-    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;        
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;  
 }
 
 .minibio-cover {
@@ -60,12 +45,16 @@
 }
 
 .minibio-cover img {
-    height: 300px;
+    height: 325px;
 }
 
 .minibio-description {
     width: 400px;
     text-align: justify;
+}
+
+.minibio-description-quote {
+    font-size: 18px;
 }
 
 
