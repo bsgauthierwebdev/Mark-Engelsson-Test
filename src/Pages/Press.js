@@ -3,6 +3,7 @@ import PressCard from '../Components/PressCard'
 import press from '../Images/press.png'
 import pressNoBackground from '../Images/press-removebg-preview.png'
 import '../Styles/Press.css'
+import GoToTop from '../Components/GoToTop'
 
 const Press = () => {
   return (
@@ -18,6 +19,7 @@ const Press = () => {
       <div className="Press-images">
         <img src = {press} alt = 'Speaking'/>
       </div>
+      <GoToTop />
     </div>
   )
 }

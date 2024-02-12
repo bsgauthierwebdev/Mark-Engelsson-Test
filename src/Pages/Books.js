@@ -1,6 +1,7 @@
 import React from 'react'
 import BookCard from '../Components/BookCard'
 import '../Styles/Books.css'
+import GoToTop from '../Components/GoToTop'
 
 const Books = () => {
   return (
@@ -11,6 +12,7 @@ const Books = () => {
       <div className = 'Books-cards'>
         <BookCard />
       </div>
+      <GoToTop />
     </div>
   )
 }

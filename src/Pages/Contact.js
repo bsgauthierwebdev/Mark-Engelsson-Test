@@ -13,6 +13,7 @@ import bandn from '../Images/B&N-2.png'
 import goodreads from '../Images/goodreads.png'
 import pagebreak from '../Images/pagebreak.png'
 import '../Styles/Contact.css'
+import GoToTop from '../Components/GoToTop'
 
 const Contact = () => {
   const form = useRef()
@@ -198,6 +199,7 @@ const Contact = () => {
           </a> */}
         </div>
       </div>
+      <GoToTop />
     </div>
   )
 }

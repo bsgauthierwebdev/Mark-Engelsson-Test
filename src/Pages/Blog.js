@@ -1,6 +1,7 @@
 import React from 'react'
 import {PostCard} from '../Components'
 import '../Styles/Blog.scss'
+import GoToTop from '../Components/GoToTop'
 
 const Blog = () => {
   return (
@@ -13,6 +14,7 @@ const Blog = () => {
           <PostCard />
         </div>
       </div>
+      <GoToTop />
     </div>
   )
 }

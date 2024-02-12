@@ -5,6 +5,7 @@ import Author from '../Components/Author'
 import CommentsForm from '../Components/CommentsForm'
 import Comments from '../Components/Comments'
 import '../Styles/PostDetails.css'
+import GoToTop from '../Components/GoToTop'
 
 const PostDetails = () => {
   return (
@@ -22,6 +23,7 @@ const PostDetails = () => {
           </div>
         </div>
       </div>
+      <GoToTop />
     </div>
   )
 }

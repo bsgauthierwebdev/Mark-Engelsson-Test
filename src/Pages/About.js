@@ -2,6 +2,7 @@ import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useParams } from 'react-router-dom'
 import '../Styles/About.css'
+import GoToTop from '../Components/GoToTop'
 
 const GET_AUTHOR_INFO = gql`
   query GetAboutInfo {
@@ -80,7 +81,7 @@ const About = () => {
           })}
         </div>
       </div>
-      
+      <GoToTop />
     </div>
   )
 }

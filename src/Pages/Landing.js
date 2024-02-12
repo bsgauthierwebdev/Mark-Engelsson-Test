@@ -5,6 +5,7 @@ import headshot2 from '../Images/headshot2.png'
 import headshot3 from '../Images/headshot2-removebg-preview.png'
 import cover from '../Images/wiwimimcover.jpg'
 import '../Styles/Landing.css'
+import GoToTop from '../Components/GoToTop'
 
 const Landing = () => {
   return (
@@ -42,6 +43,7 @@ const Landing = () => {
           </div> */}
         </div>
       </div>
+      <GoToTop />
     </div>
   )
 }
