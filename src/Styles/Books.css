@@ -23,9 +23,14 @@
 
 @media (max-width: 480px) {
   .Books {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    width: 95%;
+    align-items: center;
+    /* justify-content: center;
+    text-align: center; */
+    /* width: 95%; */
+    border: solid 1px red;
   }
 }
 
