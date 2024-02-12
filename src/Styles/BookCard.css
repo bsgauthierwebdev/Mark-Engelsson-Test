@@ -46,7 +46,7 @@
 
 
 /* Styling for mobile devices */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     .BookCard {
         display: flex;
         flex-direction: column;
@@ -58,7 +58,7 @@
         font-size: 24px;
         padding: 0 16px;
         background-color: rgb(234, 234, 235);
-        max-width: 400px;
+        max-width: 350px;
         text-align: center;
         border-radius: 30px;
         box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
