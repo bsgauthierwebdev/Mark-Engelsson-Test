@@ -51,24 +51,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .BookCard-title {
         font-size: 24px;
         padding: 0 16px;
         background-color: rgb(234, 234, 235);
-        max-width: 370px;
+        max-width: 400px;
         text-align: center;
         border-radius: 30px;
         box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
     }
 
     .BookCard-content {
+        border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: top;
+        justify-content: center;
         margin: 16px;
-        max-width: 600px; 
+        max-width: 375px; 
         /* border-style: solid; */
     }
 

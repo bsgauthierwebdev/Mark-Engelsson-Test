@@ -23,17 +23,11 @@
 
 @media (max-width: 480px) {
   .Books {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 95%; */
-    border: solid 1px red;
+    text-align: center; */
+    width: 95%;
     margin: auto;
-    width: 75%;
-    padding: 10px;
   }
 }
 
