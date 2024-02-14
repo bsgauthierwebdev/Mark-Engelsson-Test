@@ -27,7 +27,6 @@ const BookCard = () => {
   ) => (
     <div className = 'BookCard'>
       <Link to = {purchaseLink} target = '_blank' className = 'BookCard-title'>{title}</Link>
-      {/* <header className = 'BookCard-title'>{title}</header> */}
       <div className = 'BookCard-content'>
         <div className = 'BookCard-image'>
           <img 
