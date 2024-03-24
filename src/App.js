@@ -11,6 +11,7 @@ import Press from './Pages/Press';
 import PostDetails from './Pages/PostDetails';
 import {Layout} from './Components'
 import './Styles/App.css';
+import GoToTop from './Components/GoToTop';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Navigation />
           </div>
           <div className = 'content'>
+            {/* <GoToTop /> */}
             <Routes>
               <Route path = '/' element = {<Landing />} />
               <Route path = '/about' element = {<About />} />

@@ -6,6 +6,7 @@ import GoToTop from '../Components/GoToTop'
 const Blog = () => {
   return (
     <div className = 'Blog'>
+      <GoToTop />
       <div className = 'Blog-header'>
         <h1>Blog</h1>
       </div>
@@ -14,7 +15,6 @@ const Blog = () => {
           <PostCard />
         </div>
       </div>
-      <GoToTop />
     </div>
   )
 }
